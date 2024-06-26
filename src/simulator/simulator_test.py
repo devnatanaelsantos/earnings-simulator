@@ -19,14 +19,14 @@ def test_simulate_with_all_parameters(simulator):
 
     response = simulator.simulate(mock_request)
     
-    assert "custo_a" in response 
-    assert "custo_g" in response
-    assert "val_necessario_g" in response
-    assert "val_necessario_a" in response
-    assert response["custo_g"] == 378.66
-    assert response["custo_a"] == 349.1
-    assert response["val_necessario_g"] == 2378.66
-    assert response["val_necessario_a"] == 2349.1
+    assert "custo_alc" in response 
+    assert "custo_gas" in response
+    assert "val_necessario_gas" in response
+    assert "val_necessario_alc" in response
+    assert response["custo_gas"] == 378.66
+    assert response["custo_alc"] == 349.1
+    assert response["val_necessario_gas"] == 2378.66
+    assert response["val_necessario_alc"] == 2349.1
 
 def test_simulate_with_gas_only(simulator):
     mock_request = MockRequest({"val_almejado": 2000,
@@ -36,9 +36,9 @@ def test_simulate_with_gas_only(simulator):
 
     response = simulator.simulate(mock_request)
     
-    assert "custo_g" in response
-    assert response["custo_g"] == 378.66
-    assert response["val_necessario_g"] == 2378.66    
+    assert "custo_gas" in response
+    assert response["custo_gas"] == 378.66
+    assert response["val_necessario_gas"] == 2378.66    
 
 def test_simulate_with_alc_only(simulator):
     mock_request = MockRequest({"val_almejado": 2000,
@@ -48,6 +48,6 @@ def test_simulate_with_alc_only(simulator):
     
     response = simulator.simulate(mock_request)
     
-    assert "custo_a" in response
-    assert response["custo_a"] == 349.1
-    assert response["val_necessario_a"] == 2349.1
+    assert "custo_alc" in response
+    assert response["custo_alc"] == 349.1
+    assert response["val_necessario_alc"] == 2349.1
