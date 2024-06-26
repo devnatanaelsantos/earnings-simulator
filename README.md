@@ -6,6 +6,10 @@ O usuário precisa informar o valor que deseja receber, a quantidade de horas qu
 
 O sistema simula a distância percorrida, calcula o consumo de combustível por quilômetro, o custo total e retorna o valor necessário a acumular.
 
+## Tecnologias
+- Flask
+- pytest
+
 ## Executando a Aplicação
 1. Clone o repositório:
 ````bash
